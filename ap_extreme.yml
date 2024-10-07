@@ -1,15 +1,15 @@
 ---
-- name: Kiểm tra kết nối tới AP Extreme qua SSH
+- name: Kiểm tra kết nối SSH và lấy cấu hình từ AP Extreme
   hosts: all
   gather_facts: no
   tasks:
-    - name: Kiểm tra kết nối qua lệnh ping
+    - name: Kiểm tra kết nối SSH
       ping:
 
     - name: Kiểm tra phiên bản hệ điều hành
-        command: "show version"
+      command: "show version"
       register: version_output
 
     - name: Hiển thị phiên bản hệ điều hành
       debug:
-        var: version_output
+        var: version_output.stdout
