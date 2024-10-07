@@ -7,8 +7,7 @@
       ping:
 
     - name: Kiểm tra phiên bản hệ điều hành
-        command:
-          cmd: "show version"
+        command: "show version"
       register: version_output
 
     - name: Hiển thị phiên bản hệ điều hành
