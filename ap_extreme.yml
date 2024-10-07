@@ -2,6 +2,7 @@
 - name: Kiểm tra kết nối SSH và lấy cấu hình từ AP Extreme
   hosts: all
   gather_facts: no
+  connection: network_cli
   tasks:
     - name: Kiểm tra kết nối SSH
       ping:
